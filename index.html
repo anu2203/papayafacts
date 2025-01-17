@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papaya Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        #app {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+        }
+
+        li h2 {
+            margin: 0 0 5px;
+            color: #00796b;
+        }
+
+        li p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Papaya Facts</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        const facts = [
+            {
+                fact: "Origin",
+                description: "Papaya is native to the tropical regions of the Americas, particularly southern Mexico and Central America."
+            },
+            {
+                fact: "Botanical Name",
+                description: "The scientific name for papaya is Carica papaya."
+            },
+            {
+                fact: "Nutrient-Rich",
+                description: "Papayas are rich in vitamins C and A, folate, and dietary fiber. They also contain small amounts of calcium, magnesium, and potassium."
+            },
+            {
+                fact: "Digestive Aid",
+                description: "Papaya contains an enzyme called papain, which helps in the digestion of proteins. This enzyme is often used as a meat tenderizer."
+            },
+            {
+                fact: "Low in Calories",
+                description: "Papayas are low in calories, making them a great option for those looking to maintain or lose weight."
+            },
+            {
+                fact: "Antioxidant Properties",
+                description: "The fruit is high in antioxidants, such as carotenoids, which can help reduce inflammation and fight free radicals."
+            },
+            {
+                fact: "Versatile Usage",
+                description: "Papaya can be eaten raw, cooked, or dried. It is often used in smoothies, salads, and desserts."
+            },
+            {
+                fact: "Cultivation",
+                description: "Papayas grow on a tree-like plant that can reach up to 10 meters in height. The plant has a hollow trunk and large, lobed leaves."
+            },
+            {
+                fact: "Varieties",
+                description: "There are several varieties of papaya, including the Hawaiian and Mexican types. Hawaiian papayas are smaller and pear-shaped, while Mexican papayas are larger and can weigh up to 10 pounds."
+            },
+            {
+                fact: "Medicinal Uses",
+                description: "In traditional medicine, papaya leaves and seeds have been used to treat various ailments, including digestive issues and skin problems. However, scientific evidence supporting these uses is limited."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const factsList = document.getElementById('facts-list');
+            facts.forEach(fact => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+                factsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
